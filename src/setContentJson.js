@@ -1,6 +1,10 @@
 const fs = require('fs')
 const marked = require('marked')
 
+marked.setOptions({
+  headerIds: false,
+})
+
 // ブログコンテンツのファイルパス
 const contentPath = './content/blog'
 

@@ -14,8 +14,8 @@
     "pages": "node ./src/setPages.js"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint",
-    "*.{css,vue}": "stylelint"
+    "*.{js,vue}": "eslint --fix",
+    "*.{css,vue}": "stylelint --fix"
   },
   "husky": {
     "hooks": {
@@ -23,6 +23,7 @@
     }
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "nuxt": "^2.14.0"
   },
   "devDependencies": {

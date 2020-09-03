@@ -1,9 +1,17 @@
 <template>
   <div>
+    <page-header />
     <Nuxt />
   </div>
 </template>
-
+<script>
+import pageHeader from '@/layouts/pageHeader'
+export default {
+  components: {
+    pageHeader,
+  },
+}
+</script>
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',

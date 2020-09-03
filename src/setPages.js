@@ -18,9 +18,21 @@ for (const i of contentObj.content) {
     })
   }
 
-  const html = `<template><div>${i.post}</div></template>`
+  const template = `
+<template>
+  <div>
+    ${i.post}
+  </div>
+</template>
+
+<script>
+export default {
+	layout: 'content',
+}
+</script>
+`
 
   try {
-    fs.writeFileSync(`./pages/${i.tag}/${i.path}/index.vue`, html)
+    fs.writeFileSync(`./pages/${i.tag}/${i.path}/index.vue`, template)
   } catch (e) {}
 }
