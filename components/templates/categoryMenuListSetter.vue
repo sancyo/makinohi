@@ -12,7 +12,11 @@ export default {
   },
   data() {
     return {
-      categoryMenuList: ['Vue.js', 'Design', 'Others'],
+      categoryMenuList: [
+        { name: 'Vue.js', path: 'vue' },
+        { name: 'Design', path: 'design' },
+        { name: 'Other', path: 'other' },
+      ],
     }
   },
 }

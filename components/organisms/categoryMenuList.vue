@@ -2,7 +2,7 @@
   <nav class="category-menu-list">
     <ul v-for="item in categoryNameList" :key="item.id">
       <li>
-        <category-menu :category-name="item" />
+        <category-menu :category-name="item.name" :path="item.path" />
       </li>
     </ul>
   </nav>
