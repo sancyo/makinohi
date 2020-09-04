@@ -17,6 +17,7 @@ export default {
     }
   },
   methods: {
+    // 現在表示しているページに応じてJSONを整形して返すメソッド
     sortPostContentJson() {
       const routePath = this.$route.path
       if (routePath === '/') {
