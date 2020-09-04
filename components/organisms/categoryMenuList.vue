@@ -1,7 +1,7 @@
 <template>
   <nav class="category-menu-list">
-    <ul v-for="item in categoryNameList" :key="item.id">
-      <li>
+    <ul>
+      <li v-for="item in categoryNameList" :key="item.id">
         <category-menu :category-name="item.name" :path="item.path" />
       </li>
     </ul>
@@ -22,3 +22,13 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+ul {
+  display: flex;
+}
+
+.category-menu-list {
+  margin: 0 auto;
+}
+</style>

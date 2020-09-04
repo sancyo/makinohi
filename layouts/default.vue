@@ -1,63 +1,28 @@
 <template>
   <div>
     <page-header />
-    <Nuxt />
+    <div class="container category-menu-container">
+      <category-menu-list-setter />
+    </div>
+    <div class="container default-container">
+      <div><Nuxt /></div>
+    </div>
   </div>
 </template>
 <script>
+import categoryMenuListSetter from '@/components/templates/categoryMenuListSetter'
 import pageHeader from '@/layouts/pageHeader'
 export default {
   components: {
     pageHeader,
+    categoryMenuListSetter,
   },
 }
 </script>
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+<style scoped>
+.category-menu-container {
+  display: block;
+  text-align: left;
+  margin: 6rem auto;
 }
 </style>
