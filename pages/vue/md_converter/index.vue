@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>md converter</h2>
-    <p>マークダウンをHTMLに変換するサンプル</p>
+    <p>マークダウンを HTML に変換するサンプル</p>
     <h2>使い方</h2>
     <p>npm run read</p>
     <h3>開発環境</h3>

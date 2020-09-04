@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <div>
-      <div class="links">
-        <nuxt-link to="/other/about_site">about site</nuxt-link>
-        <nuxt-link to="/vue/md_converter">md converter</nuxt-link>
-      </div>
-    </div>
+    <post-card-list-setter />
   </div>
 </template>
 
 <script>
-export default {}
+import postCardListSetter from '@/components/templates/postCardListSetter'
+export default {
+  components: {
+    postCardListSetter,
+  },
+}
 </script>
 
 <style>
