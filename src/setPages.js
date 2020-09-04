@@ -18,8 +18,7 @@ for (const i of contentObj.content) {
     })
   }
 
-  const template = `
-<template>
+  const template = `<template>
   <div>
     ${i.post}
   </div>
@@ -31,8 +30,24 @@ export default {
 }
 </script>
 `
+  const categoryPageTemplate = `<template>
+  <div class="container">
+    <post-card-list-setter />
+  </div>
+</template>
+
+<script>
+import postCardListSetter from '@/components/templates/postCardListSetter'
+export default {
+  components: {
+    postCardListSetter,
+  },
+}
+</script>
+`
 
   try {
     fs.writeFileSync(`./pages/${i.tag}/${i.path}/index.vue`, template)
+    fs.writeFileSync(`./pages/${i.tag}/index.vue`, categoryPageTemplate)
   } catch (e) {}
 }
