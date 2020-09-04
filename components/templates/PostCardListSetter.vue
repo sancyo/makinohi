@@ -1,6 +1,6 @@
 <template>
   <div>
-    <post-card-list :post-content="formatPostCOntentJson()" />
+    <post-card-list :post-content="sortPostContentJson()" />
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
     }
   },
   methods: {
-    formatPostCOntentJson() {
+    sortPostContentJson() {
       const routePath = this.$route.path
       if (routePath === '/') {
         return postContentJson.content
