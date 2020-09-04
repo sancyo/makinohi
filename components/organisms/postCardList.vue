@@ -19,8 +19,8 @@ export default {
   },
   props: {
     postContent: {
-      type: Object,
-      default: () => {},
+      type: Array,
+      default: () => [],
     },
   },
 }
