@@ -1,7 +1,5 @@
 <template>
-  <div class="category-menu-list-setter">
-    <category-menu-list :category-name-list="categoryMenuList" />
-  </div>
+  <category-menu-list :category-name-list="categoryMenuList" />
 </template>
 
 <script>

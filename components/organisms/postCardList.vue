@@ -25,3 +25,17 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.post-card-list {
+  background: #fff;
+  padding: 5rem 7rem;
+  border-radius: 10px;
+  width: 55%;
+
+  /* box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08), 0 2px 2px 0 rgba(0, 0, 0, 0.1); */
+}
+li {
+  margin: 0 0 2rem 0;
+}
+</style>

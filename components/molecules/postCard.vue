@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="post-card">
     <nuxt-link :to="`/${tag}/${path}`">
       <article>
         <div class="post-info">
-          <h3>{{ title }}</h3>
-          <time>{{ date }}</time>
-          <span>{{ tag }}</span>
+          <time class="post-date">{{ date }}</time>
+          <span class="post-tag" :style="color">{{ tag }}</span>
+          <h3 class="post-title">{{ title }}</h3>
         </div>
       </article>
     </nuxt-link>
@@ -32,5 +32,46 @@ export default {
       default: '',
     },
   },
+  data() {
+    return {
+      color: { backgroundColor: this.setTagcolor() },
+    }
+  },
+  methods: {
+    setTagcolor() {
+      if (this.tag === 'vue') {
+        return '#41B883'
+      } else {
+        return '#323232'
+      }
+    },
+  },
 }
 </script>
+
+<style scoped>
+.post-card {
+  background: #fff;
+  display: block;
+  padding: 1rem;
+}
+.post-title {
+  display: block;
+  font-size: 2rem;
+  margin: 0.6rem 0 0.6rem 0;
+}
+.post-date {
+  font-size: 1.4rem;
+  color: #878787;
+}
+.post-tag {
+  display: inline-block;
+  font-size: 1.4rem;
+  background: #323232;
+  color: #fff;
+  padding: 0.2rem 1rem;
+  border-radius: 3px;
+  margin: 0 0 0 1rem;
+  transform: translateY(-1px);
+}
+</style>

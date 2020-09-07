@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <post-card-list :post-content="sortPostContentJson()" />
-  </div>
+  <post-card-list :post-content="sortPostContentJson()" />
 </template>
 
 <script>

@@ -4,9 +4,7 @@
     <div class="container category-menu-container">
       <category-menu-list-setter />
     </div>
-    <div class="container default-container">
-      <div><Nuxt /></div>
-    </div>
+    <Nuxt />
   </div>
 </template>
 <script>
@@ -24,5 +22,8 @@ export default {
   display: block;
   text-align: left;
   margin: 6rem auto;
+}
+.right {
+  background: #fff;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>about site</h2>
+    <h2>about site !</h2>
     <p>Vue.js で作成した個人ブログ</p>
     <h2>使い方</h2>
     <p>アウトプット目的で使います</p>
