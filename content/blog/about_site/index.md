@@ -1,12 +1,12 @@
 ---
-title: Nuxt.jsで作る静的サイトジェネレーター
-date: 2020/08/28
-tag: vue
+title: このサイトについて
+date: 2020/08/31
+tag: design
 ---
 
 ## about site !
 
-Vue.js で作成した個人ブログ
+Nuxt.js で作成した個人ブログ
 
 ## 使い方
 

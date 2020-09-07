@@ -41,6 +41,8 @@ export default {
     setTagcolor() {
       if (this.tag === 'vue') {
         return '#41B883'
+      } else if (this.tag === 'design') {
+        return '#0786F8'
       } else {
         return '#323232'
       }
@@ -53,12 +55,12 @@ export default {
 .post-card {
   background: #fff;
   display: block;
-  padding: 1rem;
+  padding: 1rem 0.6rem;
 }
 .post-title {
   display: block;
-  font-size: 2rem;
-  margin: 0.6rem 0 0.6rem 0;
+  font-size: 1.7rem;
+  margin: 0.4rem 0;
 }
 .post-date {
   font-size: 1.4rem;
