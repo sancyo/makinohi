@@ -1,6 +1,6 @@
 <template>
   <div class="ad-card">
-    <a href="https://github.com/sancyo">
+    <a href="https://github.com/sancyo" class="ad-link">
       <img src="@/static/git-hub-logo.svg" alt="GitHub" class="ad" />
     </a>
   </div>
@@ -15,14 +15,17 @@ export default {}
   width: 30rem;
   background: #fff;
   border-radius: 10px;
-  text-align: center;
-  display: flex;
-  align-items: center;
   position: fixed;
   right: calc((100vw - 1160px) / 2);
   height: 25rem;
 }
 .ad {
   width: 50%;
+}
+.ad-link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 </style>
