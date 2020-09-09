@@ -31,9 +31,7 @@ export default {
 </script>
 `
   const categoryPageTemplate = `<template>
-  <div class="container">
-    <post-card-list-setter />
-  </div>
+  <post-card-list-setter />
 </template>
 
 <script>

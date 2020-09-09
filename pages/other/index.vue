@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
-    <post-card-list-setter />
-  </div>
+  <post-card-list-setter />
 </template>
 
 <script>
