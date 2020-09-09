@@ -33,7 +33,6 @@ export default {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  max-width: 1160px;
   width: 100%;
   position: relative;
 }

@@ -18,9 +18,18 @@ for (const i of contentObj.content) {
     })
   }
 
+  console.log(i.post)
+
   const template = `<template>
-  <div>
-    ${i.post}
+  <div class="content">
+    <div class="content-info">
+      <time class="content-date">${i.date}</time>
+      <span class="content-tag">${i.tag}</span>
+      <h1 class="content-title">${i.title}</h1>
+    </div>
+    <div class="content-text">
+      ${i.post}
+    </div>
   </div>
 </template>
 
@@ -29,6 +38,44 @@ export default {
 	layout: 'content',
 }
 </script>
+
+<style scoped>
+.content {
+  background: #fff;
+  width: 55%;
+  padding: 5rem 7rem;
+}
+.content-date {
+  font-size: 1.4rem;
+}
+.content-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin: 0.8rem 0;
+}
+.content-tag {
+  display: inline-block;
+  font-size: 1.4rem;
+  background: #323232;
+  color: #fff;
+  padding: 0.2rem 1rem;
+  border-radius: 3px;
+  margin: 0 0 0 1rem;
+  transform: translateY(-1px);
+}
+.content-text {
+  margin-top: 2.4rem;
+}
+
+.content-text h2 {
+  font-size: 2.2rem;
+  margin: 5rem 0px 1.2rem
+}
+
+.content-text p {
+  font-size: 1.6rem;
+}
+</style>
 `
   const categoryPageTemplate = `<template>
   <post-card-list-setter />

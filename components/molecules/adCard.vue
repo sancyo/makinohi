@@ -15,8 +15,6 @@ export default {}
   width: 30rem;
   background: #fff;
   border-radius: 10px;
-  position: fixed;
-  right: calc((100vw - 1160px) / 2);
   height: 25rem;
 }
 .ad {
