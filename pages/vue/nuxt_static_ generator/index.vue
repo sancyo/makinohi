@@ -51,14 +51,67 @@ export default {
 
 .content-text h2 {
   font-size: 2.2rem;
-  margin: 5rem 0 1.2rem;
+  padding: 1.4rem 0 1.4rem 1.6rem;
+  position: relative;
+  margin: 5.6rem 0 1rem 0;
+}
+.content-text h2::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 0;
+  width: 5px;
+  height: 80%;
+  background: #323232;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+}
+.content-text h3 {
+  font-size: 1.8rem;
+  padding: 1.4rem 0;
+  margin: 1.8rem 0;
+}
+.content-text h4 {
+  font-size: 1.6rem;
+  margin: 2.4rem 0 0.8rem 0;
+}
+.content-text ul {
+  padding-left: 0.8rem;
+  margin: 1.6rem 0;
+}
+.content-text li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.content-text pre {
+  background: #f7f7f9;
+  padding: 2rem;
+  margin: 0;
+  border-radius: 8px;
+}
+.content-text code {
+  font-family: Menlo, Consolas, Liberation Mono, Courier, monospace;
+}
+.content-text a {
+  color: #20a8ea;
+}
+.content-text a:hover {
+  text-decoration-line: underline;
+}
+.content-text hr {
+  border-color: #fafafa;
+  margin: 4rem 0;
+}
+.content-text strong {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.content-text img {
+  width: 100%;
 }
 
 .content-text p {
   font-size: 1.6rem;
-}
-
-.content-text img {
-  width: 100%;
 }
 </style>
