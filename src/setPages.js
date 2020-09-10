@@ -44,13 +44,14 @@ export default {
   background: #fff;
   width: 55%;
   padding: 5rem 7rem;
+  border-radius: 10px;
 }
 .content-date {
   font-size: 1.4rem;
 }
 .content-title {
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0.8rem 0;
 }
 .content-tag {
@@ -74,6 +75,10 @@ export default {
 
 .content-text p {
   font-size: 1.6rem;
+}
+
+.content-text img {
+  width: 100%
 }
 </style>
 `

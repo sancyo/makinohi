@@ -20,6 +20,6 @@ export default {}
   cursor: pointer;
 }
 .home-button-img {
-  width: 2rem;
+  width: 1.6rem;
 }
 </style>

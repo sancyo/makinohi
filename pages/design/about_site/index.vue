@@ -6,6 +6,9 @@
       <h1 class="content-title">このサイトについて</h1>
     </div>
     <div class="content-text">
+      <p>
+        <img src="@/content/blog/about_site/eye-catch.png" alt="DUST CASE" />
+      </p>
       <h2>about site !</h2>
       <p>Nuxt.js で作成した個人ブログ</p>
       <h2>使い方</h2>
@@ -25,13 +28,14 @@ export default {
   background: #fff;
   width: 55%;
   padding: 5rem 7rem;
+  border-radius: 10px;
 }
 .content-date {
   font-size: 1.4rem;
 }
 .content-title {
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0.8rem 0;
 }
 .content-tag {
@@ -55,5 +59,9 @@ export default {
 
 .content-text p {
   font-size: 1.6rem;
+}
+
+.content-text img {
+  width: 100%;
 }
 </style>
