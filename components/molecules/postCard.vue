@@ -61,6 +61,10 @@ export default {
   display: block;
   font-size: 1.7rem;
   margin: 0.4rem 0;
+  transition: 0.3s;
+}
+.post-title:hover {
+  opacity: 50%;
 }
 .post-date {
   font-size: 1.4rem;
