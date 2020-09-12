@@ -1,7 +1,7 @@
 <template>
-  <nuxt-link :to="`/${path}`" class="category-menu">
+  <nuxt-link :to="`/${link}`" class="category-menu">
     <img
-      :src="require(`@/static/category-icon/icon-${path}.png`)"
+      :src="require(`@/static/category-icon/icon-${path}.svg`)"
       :alt="`${path}`"
       class="category-menu-img"
     />
@@ -19,6 +19,20 @@ export default {
     path: {
       type: String,
       default: '',
+    },
+  },
+  data() {
+    return {
+      link: this.setPath(),
+    }
+  },
+  methods: {
+    setPath() {
+      if (this.path === 'home') {
+        return ''
+      } else {
+        return this.path
+      }
     },
   },
 }

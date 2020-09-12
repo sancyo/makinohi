@@ -1,7 +1,7 @@
 ---
 title: Nuxt.jsで作る静的サイトジェネレーター
 date: 2020/08/28
-tag: vue
+tag: dev
 ---
 
 ## about site !

@@ -39,8 +39,8 @@ export default {
   },
   methods: {
     setTagcolor() {
-      if (this.tag === 'vue') {
-        return '#41B883'
+      if (this.tag === 'dev') {
+        return '#FFC825'
       } else if (this.tag === 'design') {
         return '#0786F8'
       } else {

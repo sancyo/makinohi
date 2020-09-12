@@ -2,7 +2,7 @@
   <div class="content">
     <div class="content-info">
       <time class="content-date">2020/08/28</time>
-      <span class="content-tag">vue</span>
+      <span class="content-tag">dev</span>
       <h1 class="content-title">Nuxt.jsで作る静的サイトジェネレーター</h1>
     </div>
     <div class="content-text">

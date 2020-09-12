@@ -32,6 +32,7 @@ export default {
   padding: 5rem 7rem;
   border-radius: 10px;
   width: 55%;
+  position: relative;
 
   /* box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08), 0 2px 2px 0 rgba(0, 0, 0, 0.1); */
 }

@@ -11,7 +11,8 @@ export default {
   data() {
     return {
       categoryMenuList: [
-        { name: 'Vue.js', path: 'vue' },
+        { name: 'Home', path: 'home' },
+        { name: 'Dev', path: 'dev' },
         { name: 'Design', path: 'design' },
         { name: 'Other', path: 'other' },
       ],
