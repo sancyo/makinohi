@@ -18,8 +18,6 @@ for (const i of contentObj.content) {
     })
   }
 
-  console.log(i.post)
-
   const template = `<template>
   <div class="content">
     <div class="content-info">
