@@ -43,7 +43,7 @@ export default {
   margin-right: 2rem;
 }
 .category-menu-img {
-  width: 4rem;
+  width: 3.6rem;
   display: inline-block;
   background-color: #fff;
 
