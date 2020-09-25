@@ -22,8 +22,8 @@ for (const i of contentObj.content) {
   <div class="content">
     <div class="content-info">
       <time class="content-date">${i.date}</time>
-      <span class="content-tag">${i.tag}</span>
       <h1 class="content-title">${i.title}</h1>
+      <post-tag tag="${i.tag}" />
     </div>
     <div class="content-text">
       ${i.post}
@@ -32,8 +32,12 @@ for (const i of contentObj.content) {
 </template>
 
 <script>
+import postTag from '@/components/atoms/postTag'
 export default {
-	layout: 'content',
+  layout: 'content',
+  components: {
+    postTag,
+  },
 }
 </script>
 
@@ -50,7 +54,7 @@ export default {
 .content-title {
   font-size: 2.4rem;
   font-weight: bold;
-  margin: 0.8rem 0;
+  margin: 0.4rem 0 1.6rem 0;
 }
 .content-tag {
   display: inline-block;
@@ -59,7 +63,6 @@ export default {
   color: #fff;
   padding: 0.2rem 1rem;
   border-radius: 3px;
-  margin: 0 0 0 1rem;
   transform: translateY(-1px);
 }
 .content-text {
@@ -70,7 +73,7 @@ export default {
   font-size: 2.2rem;
   padding: 1.4rem 0 1.4rem 1.6rem;
   position: relative;
-  margin: 5.6rem 0 1rem 0;
+  margin: 4rem 0 1rem 0;
 }
 .content-text h2::after {
   position: absolute;
@@ -125,7 +128,8 @@ export default {
   margin-bottom: 0.8rem;
 }
 .content-text img {
-  width: 100%
+  width: 100%;
+  margin-bottom: 1.8rem;
 }
 
 .content-text p {

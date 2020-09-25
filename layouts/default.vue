@@ -1,6 +1,9 @@
 <template>
   <div>
     <page-header />
+    <div class="container category-menu-container">
+      <category-menu-list-setter />
+    </div>
     <div class="container default-container">
       <Nuxt />
       <ad-card />
@@ -10,10 +13,12 @@
 <script>
 import pageHeader from '@/layouts/pageHeader'
 import adCard from '@/components/molecules/adCard'
+import categoryMenuListSetter from '@/components/templates/categoryMenuListSetter'
 export default {
   components: {
     pageHeader,
     adCard,
+    categoryMenuListSetter,
   },
 }
 </script>

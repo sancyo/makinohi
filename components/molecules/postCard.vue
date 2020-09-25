@@ -4,7 +4,7 @@
       <article>
         <div class="post-info">
           <time class="post-date">{{ date }}</time>
-          <span class="post-tag" :style="color">{{ tag }}</span>
+          <post-tag :tag="tag" />
           <h3 class="post-title">{{ title }}</h3>
         </div>
       </article>
@@ -13,7 +13,11 @@
 </template>
 
 <script>
+import postTag from '@/components/atoms/postTag'
 export default {
+  components: {
+    postTag,
+  },
   props: {
     tag: {
       type: String,
@@ -30,22 +34,6 @@ export default {
     path: {
       type: String,
       default: '',
-    },
-  },
-  data() {
-    return {
-      color: { backgroundColor: this.setTagcolor() },
-    }
-  },
-  methods: {
-    setTagcolor() {
-      if (this.tag === 'dev') {
-        return '#FFC825'
-      } else if (this.tag === 'design') {
-        return '#0786F8'
-      } else {
-        return '#323232'
-      }
     },
   },
 }
@@ -69,15 +57,5 @@ export default {
 .post-date {
   font-size: 1.4rem;
   color: #878787;
-}
-.post-tag {
-  display: inline-block;
-  font-size: 1.4rem;
-  background: #323232;
-  color: #fff;
-  padding: 0.2rem 1rem;
-  border-radius: 3px;
-  margin: 0 0 0 1rem;
-  transform: translateY(-1px);
 }
 </style>

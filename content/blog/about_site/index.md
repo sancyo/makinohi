@@ -1,10 +1,12 @@
 ---
-title: このサイトについて
-date: 2020/08/31
+title: 新しくブログを制作した
+date: 2020/09/13
 tag: design
 ---
 
 ![DUST CASE](@/content/blog/about_site/eye-catch.png)
+
+日々学習したことを、ここにまとめていく。
 
 ## about site !
 
