@@ -52,7 +52,7 @@ export default {
   transition: 0.3s;
 }
 .post-title:hover {
-  opacity: 80%;
+  opacity: 70%;
 }
 .post-date {
   font-size: 1.4rem;
