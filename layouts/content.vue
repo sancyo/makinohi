@@ -3,7 +3,7 @@
     <page-header />
     <div class="container content-container">
       <div class="home-button">
-        <back-button />
+        <page-back-button />
       </div>
       <Nuxt />
       <ad-card />
@@ -14,12 +14,12 @@
 <script>
 import pageHeader from '@/layouts/pageHeader'
 import adCard from '@/components/molecules/adCard'
-import backButton from '@/components/atoms/backButton'
+import pageBackButton from '@/components/atoms/pageBackButton'
 export default {
   components: {
     pageHeader,
     adCard,
-    backButton,
+    pageBackButton,
   },
 }
 </script>
