@@ -54,5 +54,6 @@ export default {
 .post-date {
   font-size: 1.4rem;
   color: #878787;
+  margin-right: 1rem;
 }
 </style>

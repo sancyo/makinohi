@@ -38,6 +38,5 @@ export default {
   padding: 0.3rem 0.8rem;
   border-radius: 3px;
   transform: translateY(-1px);
-  margin-left: 1rem;
 }
 </style>
