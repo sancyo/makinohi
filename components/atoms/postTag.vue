@@ -35,8 +35,9 @@ export default {
   font-size: 1.4rem;
   background: #323232;
   color: #fff;
-  padding: 0.2rem 1rem;
+  padding: 0.3rem 0.8rem;
   border-radius: 3px;
   transform: translateY(-1px);
+  margin-left: 1rem;
 }
 </style>
