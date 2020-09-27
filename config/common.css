@@ -5,6 +5,7 @@ html {
   font-size: 62.5%;
   background-color: #f7f7f9;
   color: #323232;
+  overflow-y: scroll;
 }
 
 h1,
