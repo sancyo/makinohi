@@ -88,9 +88,9 @@ export default {
   border-radius: 3px;
 }
 .content-text h3 {
-  font-size: 1.8rem;
-  padding: 1.4rem 0;
-  margin: 1.8rem 0;
+  font-size: 1.7rem;
+  padding: 0.8rem 0 0.4rem 0;
+  margin: 0;
 }
 .content-text h4 {
   font-size: 1.6rem;
@@ -98,11 +98,13 @@ export default {
 }
 .content-text ul {
   padding-left: 0.8rem;
-  margin: 1.6rem 0;
+  margin: 1.2rem 0 1.8rem 0;  
+  font-size: 1.6rem;
 }
 .content-text li {
   list-style-type: disc;
   list-style-position: inside;
+  margin: 0.6rem 0;
 }
 .content-text pre {
   background: #f7f7f9;

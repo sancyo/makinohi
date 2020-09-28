@@ -11,7 +11,7 @@
     "lint:style": "stylelint --fix **/*.{vue,css} --ignore-path .gitignore",
     "lint": "yarn lint:js && yarn lint:style",
     "read": "node ./src/setContentJson.js",
-    "pages": "node ./src/setPages.js && yarn lint"
+    "pages": "node ./src/setContentJson.js && node ./src/setPages.js && yarn lint"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint --fix",

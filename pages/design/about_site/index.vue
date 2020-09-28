@@ -10,10 +10,28 @@
         <img src="@/content/blog/about_site/eye-catch.png" alt="DUST CASE" />
       </p>
       <p>日々学習したことを、ここにまとめていく。</p>
-      <h2>about site !</h2>
-      <p>Nuxt.js で作成した個人ブログ</p>
-      <h2>使い方</h2>
-      <p>アウトプット目的で使います</p>
+      <h2>このサイトについて</h2>
+      <h2>使用した技術</h2>
+      <h3>開発言語</h3>
+      <ul>
+        <li>Nuxt.js (サイトの静的化)</li>
+        <li>Node.js (ルーティング用のファイル生成)</li>
+      </ul>
+      <h3>ライブラリ</h3>
+      <ul>
+        <li>Marked.js</li>
+        <li>Normalize.css</li>
+      </ul>
+      <p>詳細は後日まとめる予定</p>
+      <h2>今後の改善点</h2>
+      <p>
+        サイトを形にすることを優先したため、多くの粗がある。今後は以下の点を中心に改善を行っていく。
+      </p>
+      <ul>
+        <li>マークダウンのホットリロード対応</li>
+        <li>目次を追加</li>
+        <li>一度に表示する記事数に制限を設ける</li>
+      </ul>
     </div>
   </div>
 </template>
@@ -75,9 +93,9 @@ export default {
   border-radius: 3px;
 }
 .content-text h3 {
-  font-size: 1.8rem;
-  padding: 1.4rem 0;
-  margin: 1.8rem 0;
+  font-size: 1.7rem;
+  padding: 0.8rem 0 0.4rem 0;
+  margin: 0;
 }
 .content-text h4 {
   font-size: 1.6rem;
@@ -85,11 +103,13 @@ export default {
 }
 .content-text ul {
   padding-left: 0.8rem;
-  margin: 1.6rem 0;
+  margin: 1.2rem 0 1.8rem 0;
+  font-size: 1.6rem;
 }
 .content-text li {
   list-style-type: disc;
   list-style-position: inside;
+  margin: 0.6rem 0;
 }
 .content-text pre {
   background: #f7f7f9;
