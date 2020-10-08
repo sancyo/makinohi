@@ -114,11 +114,13 @@ export default {
 .content-text pre {
   background: #f7f7f9;
   padding: 2rem;
-  margin: 0;
   border-radius: 8px;
+  margin-top: 1.2rem;
+  line-height: 1.5;
 }
 .content-text code {
   font-family: Menlo, Consolas, Liberation Mono, Courier, monospace;
+  font-size: 1.4rem;
 }
 .content-text a {
   color: #20a8ea;
