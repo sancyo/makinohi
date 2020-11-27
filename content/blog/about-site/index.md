@@ -4,7 +4,7 @@ date: 2020/09/13
 tag: design
 ---
 
-![DUST CASE](@/content/blog/about_site/eye-catch.png)
+![DUST CASE](@/content/blog/about-site/eye-catch.png)
 
 日々学習したことを、ここにまとめていく。
 

@@ -1,3 +1,5 @@
+import { CreatePagesDir } from './lib/createContentPlugin.js'
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -57,5 +59,11 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    extend(config) {
+      config.plugins.push(new CreatePagesDir())
+    },
+  },
+  // 指定したディレクトリに変更があるとリロードしてくれる
+  watch: ['@/content/blog'],
 }
