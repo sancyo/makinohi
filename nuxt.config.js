@@ -1,9 +1,10 @@
+import { CreateContentPlugin } from './src/CreateContentPlugin.js'
 export default {
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: 'universal',
+  mode: 'spa',
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -57,5 +58,9 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    extend(config) {
+      config.plugins.push(new CreateContentPlugin())
+    },
+  },
 }
