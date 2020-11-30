@@ -63,4 +63,5 @@ export default {
       config.plugins.push(new CreateContentPlugin())
     },
   },
+  watch: ['@/content/blog/about_site/'],
 }
