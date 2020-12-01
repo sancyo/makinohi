@@ -1,19 +1,26 @@
 <template>
-  <post-card-list :post-content="sortPostContentJson()" />
+  <post-card-list :post-content="list" />
 </template>
 
 <script>
-import postContentJson from '@/content/json/content.json'
+// import postContentJson from '@/content/json/content.json'
 import postCardList from '@/components/organisms/postCardList'
 export default {
   components: {
     postCardList,
   },
+  props: {
+    list: {
+      type: Array,
+      default: () => [],
+    },
+  },
   data() {
     return {
-      postContentJson,
+      // postContentJson,
     }
   },
+  /*
   methods: {
     // 現在表示しているページに応じてJSONを整形して返すメソッド
     sortPostContentJson() {
@@ -27,5 +34,6 @@ export default {
       }
     },
   },
+*/
 }
 </script>

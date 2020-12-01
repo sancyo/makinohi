@@ -1,10 +1,12 @@
 import { CreateContentPlugin } from './src/CreateContentPlugin.js'
+// eslint-disable-next-line nuxt/no-cjs-in-config
+const ESLintPlugin = require('eslint-webpack-plugin')
 export default {
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: 'spa',
+  ssr: false,
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -46,9 +48,9 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module',
+    // '@nuxtjs/stylelint-module',
   ],
   /*
    ** Nuxt.js modules
@@ -60,6 +62,7 @@ export default {
    */
   build: {
     extend(config) {
+      config.plugins.push(new ESLintPlugin({ fix: true, extensions: ['vue'] }))
       config.plugins.push(new CreateContentPlugin())
     },
   },
