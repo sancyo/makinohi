@@ -9,16 +9,21 @@ export default {
   components: {
     postCardList,
   },
-  async asyncData({ $content }) {
+  async asyncData({ $content, params }) {
     const contentList = await $content('blog', { deep: true })
-      .only(['title', 'tag', 'date', 'dir'])
+      .only(['title', 'tag', 'data', 'dir'])
+      .where({ tag: params.category })
       .limit(5)
       .fetch()
     for (const i of contentList) {
       const dir = i.dir.replace('/blog/', '')
       i.dir = dir
     }
-    return { contentList }
+    const test = await params
+    return {
+      contentList,
+      test,
+    }
   },
 }
 </script>
