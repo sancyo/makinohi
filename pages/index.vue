@@ -11,8 +11,9 @@ export default {
   },
   async asyncData({ $content }) {
     const contentList = await $content('blog', { deep: true })
-      .only(['title', 'tag', 'date', 'dir'])
-      .limit(5)
+      .only(['title', 'tag', 'date', 'dir', 'createdAt'])
+      .sortBy('date', 'desc')
+      .limit(10)
       .fetch()
     for (const i of contentList) {
       const dir = i.dir.replace('/blog/', '')

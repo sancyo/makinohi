@@ -76,7 +76,7 @@ export default {
 .nuxt-content h3 {
   font-size: 1.7rem;
   padding: 0.8rem 0 0.4rem 0;
-  margin: 0;
+  margin: 3.2rem 0 0 0;
 }
 .nuxt-content h4 {
   font-size: 1.6rem;
@@ -93,12 +93,30 @@ export default {
   margin: 0.6rem 0;
 }
 .nuxt-content pre {
-  background: #f7f7f9;
   padding: 2rem;
   border-radius: 8px;
   margin-top: 1.2rem;
   line-height: 1.5;
+  position: relative;
+  overflow: visible;
+  padding-top: 4rem;
 }
+.nuxt-content-highlight {
+  position: relative;
+}
+.filename {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.6rem 2rem;
+  background: #565656;
+  z-index: 10;
+  color: #fff;
+  font-family: Menlo, Consolas, Liberation Mono, Courier, monospace;
+  font-size: 1.3rem;
+  display: block;
+}
+
 .nuxt-content code {
   font-family: Menlo, Consolas, Liberation Mono, Courier, monospace;
   font-size: 1.4rem;

@@ -13,7 +13,8 @@ export default {
     const contentList = await $content('blog', { deep: true })
       .only(['title', 'tag', 'date', 'dir'])
       .where({ tag: params.category })
-      .limit(5)
+      .sortBy('date', 'desc')
+      .limit(10)
       .fetch()
     for (const i of contentList) {
       const dir = i.dir.replace('/blog/', '')
