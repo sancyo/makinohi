@@ -5,7 +5,7 @@
         :tag="item.tag"
         :title="item.title"
         :date="item.date"
-        :path="item.path"
+        :path="item.dir"
       />
     </li>
   </ul>
