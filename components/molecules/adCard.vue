@@ -1,6 +1,11 @@
 <template>
   <div class="ad-card">
-    <a href="https://github.com/sancyo" class="ad-link">
+    <a
+      href="https://github.com/sancyo"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="ad-link"
+    >
       <img src="@/static/git-hub-logo.svg" alt="GitHub" class="ad" />
     </a>
   </div>
