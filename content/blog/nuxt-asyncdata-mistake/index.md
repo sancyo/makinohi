@@ -8,7 +8,7 @@ NuxtのasyncDataはpagesにあるvueファイル内でのみ使用可能。
 
 ## 例
 ### pages内→使える
-```vue
+```vue[pages/index.vue]
 <template>
 　<!-- 表示される -->
   <p>{{ srt }}</p>
@@ -25,7 +25,7 @@ export default {
 ```
 
 ### pages外→使えない
-```vue
+```vue[components/index.vue]
 <template>
   <!-- 表示されない -->
   <p>{{ srt }}</p>

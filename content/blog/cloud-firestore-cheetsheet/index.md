@@ -10,7 +10,7 @@ Cloud Firestore で使うメソッドをまとめる。
 
 ### get()
 
-```
+```js[index.js]
 //参照するドキュメントを指定
 const docRef = db.collection("<コレクション名>").doc("<ドキュメント名>")
 
