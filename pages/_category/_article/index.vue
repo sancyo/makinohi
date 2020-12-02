@@ -93,7 +93,6 @@ export default {
   margin: 0.6rem 0;
 }
 .nuxt-content pre {
-  background: #f7f7f9;
   padding: 2rem;
   border-radius: 8px;
   margin-top: 1.2rem;
