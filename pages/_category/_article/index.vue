@@ -3,7 +3,7 @@
     <div class="content-info">
       <time class="content-date">{{ article[0].date }}</time>
       <h1 class="content-title">{{ article[0].title }}</h1>
-      <post-tag :tag="article[0].tag" />
+      <post-category :tag="article[0].category" />
     </div>
     <div class="content-text">
       <nuxt-content :document="article[0]" />
@@ -12,11 +12,11 @@
 </template>
 
 <script>
-import postTag from '@/components/atoms/postTag'
+import postCategory from '@/components/atoms/postCategory'
 export default {
   layout: 'content',
   components: {
-    postTag,
+    postCategory,
   },
   async asyncData({ $content, params }) {
     const article = await $content(`blog/${params.article}`).fetch()

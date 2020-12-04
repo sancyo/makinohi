@@ -4,7 +4,7 @@
       <article>
         <div class="post-info">
           <time class="post-date">{{ date }}</time>
-          <post-tag :tag="tag" />
+          <post-category :category="category" />
           <h3 class="post-title">{{ title }}</h3>
         </div>
       </article>
@@ -13,13 +13,13 @@
 </template>
 
 <script>
-import postTag from '@/components/atoms/postTag'
+import postCategory from '@/components/atoms/postCategory'
 export default {
   components: {
-    postTag,
+    postCategory,
   },
   props: {
-    tag: {
+    category: {
       type: String,
       default: '',
     },

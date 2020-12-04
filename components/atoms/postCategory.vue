@@ -1,11 +1,11 @@
 <template>
-  <div class="post-tag" :style="color">{{ tag }}</div>
+  <div class="post-category" :style="color">{{ category }}</div>
 </template>
 
 <script>
 export default {
   props: {
-    tag: {
+    category: {
       type: String,
       default: '',
     },
@@ -17,9 +17,9 @@ export default {
   },
   methods: {
     setTagcolor() {
-      if (this.tag === 'dev') {
+      if (this.category === 'dev') {
         return '#FFC825'
-      } else if (this.tag === 'design') {
+      } else if (this.category === 'design') {
         return '#0786F8'
       } else {
         return '#323232'
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style scoped>
-.post-tag {
+.post-category {
   display: inline-block;
   font-size: 1.4rem;
   background: #323232;
