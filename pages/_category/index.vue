@@ -21,7 +21,6 @@ export default {
       i.dir = dir
     }
     const test = await params
-    console.log(contentList)
     return {
       contentList,
       test,
