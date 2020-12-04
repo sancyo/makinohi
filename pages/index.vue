@@ -16,7 +16,7 @@ export default {
       .limit(10)
       .fetch()
     for (const i of contentList) {
-      const dir = i.dir.replace('/blog/', '')
+      const dir = i.dir.replace(/\/blog\/.*\//, '')
       i.dir = dir
     }
     return { contentList }

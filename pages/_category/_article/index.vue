@@ -19,10 +19,11 @@ export default {
     postCategory,
   },
   async asyncData({ $content, params }) {
-    const article = await $content(`blog/${params.article}`).fetch()
-    const test = await params
+    let article = await $content('blog', { deep: true })
+      .only(['title', 'category', 'date', 'dir', 'body'])
+      .fetch()
+    article = article.filter((item) => item.dir.match(params.article))
     return {
-      test,
       article,
     }
   },
