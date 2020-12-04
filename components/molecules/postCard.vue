@@ -1,6 +1,6 @@
 <template>
   <div class="post-card">
-    <nuxt-link :to="`/${tag}/${path}`">
+    <nuxt-link :to="`/${category}/${path}`">
       <article>
         <div class="post-info">
           <time class="post-date">{{ date }}</time>

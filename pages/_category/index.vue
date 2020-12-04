@@ -11,8 +11,8 @@ export default {
   },
   async asyncData({ $content, params }) {
     const contentList = await $content('blog', { deep: true })
-      .only(['title', 'category', 'date', 'dir'])
-      .where({ tag: params.category })
+      .only(['title', 'category', 'date', 'dir', 'tag'])
+      .where({ category: params.category })
       .sortBy('date', 'desc')
       .limit(10)
       .fetch()
@@ -21,6 +21,7 @@ export default {
       i.dir = dir
     }
     const test = await params
+    console.log(contentList)
     return {
       contentList,
       test,
