@@ -3,7 +3,7 @@
     <div class="content-info">
       <time class="content-date">{{ article[0].date }}</time>
       <h1 class="content-title">{{ article[0].title }}</h1>
-      <post-category :tag="article[0].category" />
+      <post-category :category="article[0].category" />
     </div>
     <div class="content-text">
       <nuxt-content :document="article[0]" />
