@@ -2,6 +2,7 @@
 title: 新しくブログを制作した
 date: 2020/09/13
 category: design
+tag: [Note]
 ---
 
 ![DUST CASE](/blog/about-site/eye-catch.png)

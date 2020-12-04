@@ -2,6 +2,7 @@
 title: チートシート【Cloud Firestore編】
 date: 2020/10/08
 category: dev
+tag: [Firebase]
 ---
 
 Cloud Firestore で使うメソッドをまとめる。

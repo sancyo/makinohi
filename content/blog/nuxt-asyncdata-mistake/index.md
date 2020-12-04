@@ -2,6 +2,7 @@
 title: NuxtのasyncDataはpages内でしか使えない
 date: 2020/12/02
 category: dev
+tag: [Nuxt]
 ---
 
 NuxtのasyncDataはpagesにあるvueファイル内でのみ使用可能。
