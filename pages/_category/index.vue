@@ -20,10 +20,8 @@ export default {
       const dir = i.dir.replace('/blog/', '')
       i.dir = dir
     }
-    const test = await params
     return {
       contentList,
-      test,
     }
   },
 }
