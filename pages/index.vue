@@ -11,7 +11,7 @@ export default {
   },
   async asyncData({ $content }) {
     const contentList = await $content('blog', { deep: true })
-      .only(['title', 'category', 'date', 'dir', 'createdAt'])
+      .only(['title', 'category', 'date', 'dir'])
       .sortBy('date', 'desc')
       .limit(10)
       .fetch()
