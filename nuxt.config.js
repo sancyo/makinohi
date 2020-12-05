@@ -69,4 +69,11 @@ export default {
     port: 3000, // デフォルト: 3000
     host: '0.0.0.0', // デフォルト: localhost
   },
+  hooks: {
+    'content:file:beforeParse': (file) => {
+      if (file.extension === '.md') {
+        file.data = file.data.replace('{{test}}', 'success')
+      }
+    },
+  },
 }
