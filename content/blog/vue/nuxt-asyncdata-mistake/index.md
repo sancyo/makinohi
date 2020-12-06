@@ -11,8 +11,8 @@ NuxtのasyncDataはpagesにあるvueファイル内でのみ使用可能。
 ### pages内→使える
 ```vue[pages/index.vue]
 <template>
-　<!-- 表示される -->
-  <p>{{ srt }}</p>
+　<!-- {{ str }}が表示される -->
+  <p>{{ str }}</p>
 </template>
 
 <script>
@@ -28,12 +28,11 @@ export default {
 ### pages外→使えない
 ```vue[components/index.vue]
 <template>
-  <!-- 表示されない -->
+  <!-- {{ str }}が表示されない -->
   <p>{{ srt }}</p>
 </template>
 
 <script>
-// {{ str }}が表示される
 export default {
   async asyncData() {
     const srt = '世界はコンニチハ！？'

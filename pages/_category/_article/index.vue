@@ -27,6 +27,11 @@ export default {
       article,
     }
   },
+  head() {
+    return {
+      title: `${this.article[0].title} | DesignDock`,
+    }
+  },
 }
 </script>
 <style>

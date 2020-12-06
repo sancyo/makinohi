@@ -21,5 +21,10 @@ export default {
     }
     return { contentList }
   },
+  head() {
+    return {
+      titleTemplate: '',
+    }
+  },
 }
 </script>
