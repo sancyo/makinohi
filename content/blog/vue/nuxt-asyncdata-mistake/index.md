@@ -12,7 +12,7 @@ NuxtのasyncDataはpagesにあるvueファイル内でのみ使用可能。
 ```vue[pages/index.vue]
 <template>
 　<!-- {{ str }}が表示される -->
-  <p>{{ srt }}</p>
+  <p>{{ str }}</p>
 </template>
 
 <script>
