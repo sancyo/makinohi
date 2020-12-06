@@ -24,5 +24,14 @@ export default {
       contentList,
     }
   },
+  head() {
+    const category = this.$route.params.category.replace(/./, (match) =>
+      match.toUpperCase()
+    )
+    return {
+      title: `${category} | DesignDock`,
+      titleTemplate: '',
+    }
+  },
 }
 </script>

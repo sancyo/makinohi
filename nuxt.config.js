@@ -3,7 +3,7 @@ export default {
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  ssr: false,
+  ssr: true,
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -14,7 +14,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'DesignDock',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -68,12 +68,5 @@ export default {
   server: {
     port: 3000, // デフォルト: 3000
     host: '0.0.0.0', // デフォルト: localhost
-  },
-  hooks: {
-    'content:file:beforeParse': (file) => {
-      if (file.extension === '.md') {
-        file.data = file.data.replace('{{test}}', 'success')
-      }
-    },
   },
 }
