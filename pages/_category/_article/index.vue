@@ -3,7 +3,7 @@
     <div class="content-info">
       <time class="content-date">{{ article[0].date }}</time>
       <h1 class="content-title">{{ article[0].title }}</h1>
-      <post-tag :tag="article[0].tag" />
+      <post-category :category="article[0].category" />
     </div>
     <div class="content-text">
       <nuxt-content :document="article[0]" />
@@ -12,18 +12,24 @@
 </template>
 
 <script>
-import postTag from '@/components/atoms/postTag'
+import postCategory from '@/components/atoms/postCategory'
 export default {
   layout: 'content',
   components: {
-    postTag,
+    postCategory,
   },
   async asyncData({ $content, params }) {
-    const article = await $content(`blog/${params.article}`).fetch()
-    const test = await params
+    let article = await $content('blog', { deep: true })
+      .only(['title', 'category', 'date', 'dir', 'body'])
+      .fetch()
+    article = article.filter((item) => item.dir.match(params.article))
     return {
-      test,
       article,
+    }
+  },
+  head() {
+    return {
+      title: `${this.article[0].title} | DesignDock`,
     }
   },
 }
@@ -69,8 +75,8 @@ export default {
   width: 5px;
   height: 80%;
   background: #323232;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
   border-radius: 3px;
 }
 .nuxt-content h3 {
@@ -94,8 +100,8 @@ export default {
 }
 .nuxt-content pre {
   padding: 2rem;
-  border-radius: 8px;
-  margin-top: 1.2rem;
+  border-radius: 6px;
+  margin: 1.2rem 0 1.6rem 0;
   line-height: 1.5;
   position: relative;
   overflow: visible;
@@ -142,5 +148,25 @@ export default {
 
 .nuxt-content p {
   font-size: 1.6rem;
+  line-height: 1.8;
+}
+
+.nuxt-content blockquote {
+  margin: 1.6rem 0;
+  padding: 2rem 1.8rem;
+  background: rgb(241, 244, 247);
+  border-left: 4px solid rgb(32, 168, 234);
+  border-radius: 1px 6px 6px 1px;
+}
+
+.nuxt-content p code {
+  background: #eee;
+  padding: 0.2rem 0.6rem;
+  color: #000;
+  border-radius: 2px;
+}
+.nuxt-content blockquote h3 {
+  margin: 0 0 1rem 0;
+  padding: 0;
 }
 </style>

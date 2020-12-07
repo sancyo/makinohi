@@ -2,7 +2,7 @@
   <ul class="post-card-list">
     <li v-for="item in postContent" :key="item.id">
       <post-card
-        :tag="item.tag"
+        :category="item.category"
         :title="item.title"
         :date="item.date"
         :path="item.dir"
