@@ -1,5 +1,14 @@
 <template>
-  <div class="post-category" :style="color">{{ category }}</div>
+  <div>
+    <div v-if="isArticlePage()" class="post-category" :style="color"></div>
+    <div
+      v-if="!isArticlePage()"
+      class="post-category in-article"
+      :style="color"
+    >
+      {{ category }}
+    </div>
+  </div>
 </template>
 
 <script>
@@ -17,12 +26,20 @@ export default {
   },
   methods: {
     setTagcolor() {
+      console.log(this.$route.params)
       if (this.category === 'dev') {
-        return '#FFC825'
-      } else if (this.category === 'design') {
         return '#0786F8'
+      } else if (this.category === 'design') {
+        return '#FFC825'
       } else {
         return '#323232'
+      }
+    },
+    isArticlePage() {
+      if (this.$route.params.article) {
+        return false
+      } else {
+        return true
       }
     },
   },
@@ -35,8 +52,16 @@ export default {
   font-size: 1.4rem;
   background: #323232;
   color: #fff;
-  padding: 0.3rem 0.8rem;
   border-radius: 3px;
-  transform: translateY(-1px);
+  width: 0.9rem;
+  height: 0.9rem;
+  right: 7.2rem;
+  text-align: center;
+}
+
+.in-article {
+  width: auto;
+  height: auto;
+  padding: 0.3rem 0.8rem;
 }
 </style>
