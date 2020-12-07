@@ -30,6 +30,8 @@ export default {
         return '#0786F8'
       } else if (this.category === 'design') {
         return '#FFC825'
+      } else if (this.category === 'other') {
+        return '#F7615E'
       } else {
         return '#323232'
       }
