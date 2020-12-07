@@ -1,14 +1,11 @@
 ---
-title: ＠nuxt/contentのcontent:file:beforeParseについて
+title: ＠nuxt/contentのcontent:file:beforeParseのサンプル
 date: 2020/12/06
 category: dev
 tag: [Nuxt]
 ---
 
 nuxt/contentで提供されるフック、content:file:beforeParseを使ったサンプル
-
-> ### content:file:beforeParse
-> nuxt/contentがファイルを処理する前に、任意のデータを追加できる。
 
 ## 作例
 ### 構成
@@ -19,7 +16,7 @@ root
   └ nuxt.config.js
 ```
 
-### 要素
+### ソース
 mdファイル内の任意の文字列を置換するサンプル
 
 ```md[content/index.md]

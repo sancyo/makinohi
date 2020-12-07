@@ -3,8 +3,8 @@
     <nuxt-link :to="`/${category}/${path}`">
       <article>
         <div class="post-info">
-          <time class="post-date">{{ date }}</time>
           <post-category :category="category" />
+          <time class="post-date">{{ date }}</time>
           <h3 class="post-title">{{ title }}</h3>
         </div>
       </article>
@@ -45,18 +45,26 @@ export default {
   display: block;
   padding: 1rem 0.6rem;
 }
+.post-info {
+  display: flex;
+  align-items: center;
+}
 .post-title {
   display: block;
   font-size: 1.7rem;
   margin: 0.4rem 0;
   transition: 0.3s;
 }
-.post-title:hover {
+
+.post-info:hover .post-title {
   color: #3cb3e4;
 }
 .post-date {
   font-size: 1.4rem;
   color: #878787;
-  margin-right: 1rem;
+  margin: 0 1.6rem;
+}
+.post-info:hover .post-date {
+  color: #3cb3e4;
 }
 </style>
