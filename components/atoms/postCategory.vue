@@ -26,7 +26,6 @@ export default {
   },
   methods: {
     setTagcolor() {
-      console.log(this.$route.params)
       if (this.category === 'dev') {
         return '#0786F8'
       } else if (this.category === 'design') {
