@@ -1,10 +1,12 @@
 <template>
   <nuxt-link :to="`/${link}`" class="category-menu">
-    <img
-      :src="require(`@/static/category-icon/icon-${path}.svg`)"
-      :alt="`${path}`"
-      class="category-menu-img"
-    />
+    <div class="img-wrapper">
+      <img
+        :src="require(`@/static/category-icon/icon-${path}.svg`)"
+        :alt="`${path}`"
+        class="category-menu-img"
+      />
+    </div>
     <span class="category-menu-text">{{ categoryName }}</span>
   </nuxt-link>
 </template>
@@ -24,6 +26,7 @@ export default {
   data() {
     return {
       link: this.setPath(),
+      isDarkTheme: true,
     }
   },
   methods: {
@@ -42,14 +45,17 @@ export default {
   display: block;
   margin-right: 2rem;
 }
+.img-wrapper {
+  background-color: var(--color-bg-sub);
+  border-radius: 10px;
+}
 .category-menu-img {
   width: 3.6rem;
   display: inline-block;
-  background-color: #fff;
+  filter: var(--filter-svg);
 
   /* box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08), 0 2px 2px 0 rgba(0, 0, 0, 0.1); */
   padding: 1rem;
-  border-radius: 10px;
 }
 .category-menu-text {
   display: block;

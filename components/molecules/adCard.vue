@@ -13,14 +13,16 @@ export default {}
 <style scoped>
 .ad-card {
   width: 30rem;
-  background: #fff;
+  background: var(--color-bg-sub);
   border-radius: 10px;
   height: 25rem;
   position: relative;
 }
 .ad {
   width: 50%;
+  filter: var(--filter-svg);
 }
+
 .ad-link {
   display: flex;
   justify-content: center;

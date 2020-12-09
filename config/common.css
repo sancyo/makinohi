@@ -1,10 +1,25 @@
+html[data-theme='light'] {
+  --color-text-main: #323232;
+  --color-text-sub: #878787;
+  --color-bg-main: #f7f7f9;
+  --color-bg-sub: #fff;
+  --color-bg-hover: #f4f4f4;
+}
+html[data-theme='dark'] {
+  --color-text-main: #c9d1d9;
+  --color-text-sub: #8b949e;
+  --color-bg-main: #1f2023;
+  --color-bg-sub: #34363a;
+  --color-bg-hover: #e7e4e0;
+  --filter-svg: invert(100%);
+}
 html {
   font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro',
     'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体',
     'メイリオ', sans-serif;
   font-size: 62.5%;
-  background-color: #f7f7f9;
-  color: #323232;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
   overflow-y: scroll;
 }
 
@@ -27,7 +42,7 @@ li {
 a,
 a:active {
   text-decoration: none;
-  color: #323232;
+  color: var(--color-text-main);
 }
 
 .container {
