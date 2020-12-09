@@ -51,7 +51,6 @@ export default {
 .post-category {
   display: inline-block;
   font-size: 1.4rem;
-  background: #323232;
   color: #fff;
   border-radius: 3px;
   width: 0.9rem;
