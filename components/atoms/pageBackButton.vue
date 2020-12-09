@@ -12,7 +12,7 @@ export default {}
 .home-button-link {
   display: inline-block;
   padding: 1.2rem;
-  background: #fff;
+  background: var(--color-bg-sub);
   border-radius: 50%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
@@ -21,5 +21,6 @@ export default {}
 }
 .home-button-img {
   width: 1.6rem;
+  filter: var(--filter-svg);
 }
 </style>
