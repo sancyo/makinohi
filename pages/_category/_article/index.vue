@@ -27,6 +27,28 @@ export default {
       article,
     }
   },
+  data() {
+    return {
+      headingColor: this.setHeadingcolor(),
+    }
+  },
+  mounted() {
+    const el = document.getElementsByClassName('nuxt-content')[0]
+    el.dataset.category = this.$route.params.category
+  },
+  methods: {
+    setHeadingcolor() {
+      if (this.$route.params.category === 'dev') {
+        return '#0786F8'
+      } else if (this.$route.params.category === 'design') {
+        return '#FFC825'
+      } else if (this.$route.params.category === 'other') {
+        return '#F7615E'
+      } else {
+        return '#323232'
+      }
+    },
+  },
   head() {
     return {
       title: `${this.article[0].title} | DesignDock`,
@@ -35,8 +57,17 @@ export default {
 }
 </script>
 <style>
+.nuxt-content[data-category='dev'] {
+  --color-category: #0786f8;
+}
+.nuxt-content[data-category='design'] {
+  --color-category: #ffc825;
+}
+.nuxt-content[data-category='other'] {
+  --color-category: #f7615e;
+}
 .content {
-  background: #fff;
+  background: var(--color-bg-sub);
   width: 55%;
   padding: 5rem 7rem;
   border-radius: 10px;
@@ -74,7 +105,7 @@ export default {
   left: 0;
   width: 5px;
   height: 80%;
-  background: #323232;
+  background: var(--color-category);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   border-radius: 3px;
@@ -154,7 +185,7 @@ export default {
 .nuxt-content blockquote {
   margin: 1.6rem 0;
   padding: 2rem 1.8rem;
-  background: rgb(241, 244, 247);
+  background: var(--color-bg-main);
   border-left: 4px solid rgb(32, 168, 234);
   border-radius: 1px 6px 6px 1px;
 }
