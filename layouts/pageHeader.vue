@@ -2,7 +2,12 @@
   <div class="header-container">
     <div class="inner header-inner">
       <a href="/" class="site-logo">
-        <img class="logo" src="@/static/site-logo@2x.png" alt="DesignDock" />
+        <img
+          v-if="isTheme"
+          class="logo-light"
+          src="@/static/site-logo-light.svg"
+          alt="DesignDock"
+        />
       </a>
       <theme-toggle />
     </div>
@@ -13,6 +18,14 @@
 import themeToggle from '../components/atoms/themeToggle.vue'
 export default {
   components: { themeToggle },
+  data() {
+    return {
+      isTheme: true,
+    }
+  },
+  mounted() {
+    console.log(this.isTheme)
+  },
 }
 </script>
 
@@ -31,8 +44,9 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-.logo {
+.logo-light {
   padding: 1.6rem 0 1.4rem 0;
   width: 160px;
+  filter: var(--filter-svg);
 }
 </style>
