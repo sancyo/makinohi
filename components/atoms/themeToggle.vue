@@ -24,7 +24,6 @@ export default {
   methods: {
     changeSiteTheme() {
       let theme = localStorage.getItem('theme_mode')
-      console.log(theme)
       if (theme === 'light') {
         theme = 'dark'
       } else {
