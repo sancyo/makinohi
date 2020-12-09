@@ -191,9 +191,9 @@ export default {
 }
 
 .nuxt-content p code {
-  background: #eee;
+  background: var(--color-code-block);
   padding: 0.2rem 0.6rem;
-  color: #000;
+  color: var(--color-text-main);
   border-radius: 2px;
 }
 .nuxt-content blockquote h3 {

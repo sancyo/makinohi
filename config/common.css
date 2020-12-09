@@ -1,6 +1,7 @@
 html[data-theme='light'] {
   --color-text-main: #323232;
   --color-text-sub: #878787;
+  --color-code-block: #eee;
   --color-bg-main: #f7f7f9;
   --color-bg-sub: #fff;
   --color-bg-hover: #f4f4f4;
@@ -8,6 +9,7 @@ html[data-theme='light'] {
 html[data-theme='dark'] {
   --color-text-main: #c9d1d9;
   --color-text-sub: #8b949e;
+  --color-code-block: #252525;
   --color-bg-main: #1f2023;
   --color-bg-sub: #34363a;
   --color-bg-hover: #e7e4e0;
