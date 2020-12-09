@@ -175,6 +175,11 @@ export default {
 .nuxt-content img {
   width: 100%;
   margin-bottom: 1.8rem;
+  background: #f1f4f7;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.08), 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  margin-top: 0.8rem;
 }
 
 .nuxt-content p {
