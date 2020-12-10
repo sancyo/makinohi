@@ -23,9 +23,6 @@ export default {
       isTheme: true,
     }
   },
-  mounted() {
-    console.log(this.isTheme)
-  },
 }
 </script>
 
