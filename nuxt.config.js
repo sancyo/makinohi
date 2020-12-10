@@ -1,3 +1,5 @@
+require('dotenv').config()
+const { GA_ID } = process.env
 export default {
   /*
    ** Nuxt rendering mode
@@ -48,7 +50,13 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/google-analytics',
   ],
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GA_ID,
+    },
+  },
   /*
    ** Nuxt.js modules
    */
@@ -68,5 +76,8 @@ export default {
   server: {
     port: 3000, // デフォルト: 3000
     host: '0.0.0.0', // デフォルト: localhost
+  },
+  env: {
+    GA_ID,
   },
 }
