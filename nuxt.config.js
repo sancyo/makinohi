@@ -52,10 +52,8 @@ export default {
     '@nuxtjs/stylelint-module',
     '@nuxtjs/google-analytics',
   ],
-  publicRuntimeConfig: {
-    googleAnalytics: {
-      id: process.env.GA_ID,
-    },
+  googleAnalytics: {
+    id: process.env.GA_ID,
   },
   /*
    ** Nuxt.js modules
