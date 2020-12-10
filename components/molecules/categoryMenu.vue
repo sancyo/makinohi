@@ -27,6 +27,7 @@ export default {
     return {
       link: this.setPath(),
       isDarkTheme: true,
+      color: {},
     }
   },
   methods: {
@@ -44,6 +45,11 @@ export default {
 .category-menu {
   display: block;
   margin-right: 2rem;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 .img-wrapper {
   background-color: var(--color-bg-sub);
