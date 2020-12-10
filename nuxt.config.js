@@ -60,7 +60,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', '@nuxtjs/google-analytics'],
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
