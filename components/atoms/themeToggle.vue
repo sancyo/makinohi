@@ -38,11 +38,7 @@ export default {
     }
   },
   mounted() {
-    if ('theme_mode' in localStorage) {
-    } else {
-      localStorage.setItem('theme_mode', 'light')
-    }
-    if (localStorage.getItem('theme_mode') === 'light') {
+    if (localStorage.getItem('theme') === 'light') {
       document.getElementsByTagName('html')[0].dataset.theme = 'light'
       this.toggleStaus = true
       this.toggleStyle = { left: '0' }
@@ -54,7 +50,7 @@ export default {
   },
   methods: {
     changeSiteTheme() {
-      let theme = localStorage.getItem('theme_mode')
+      let theme = localStorage.getItem('theme')
       if (theme === 'light') {
         theme = 'dark'
         this.toggleStaus = false
@@ -69,10 +65,10 @@ export default {
       } else {
         document.getElementsByTagName('html')[0].dataset.theme = 'dark'
       }
-      localStorage.setItem('theme_mode', theme)
+      localStorage.setItem('theme', theme)
     },
     isToggleStatus() {
-      const theme = localStorage.getItem('theme_mode')
+      const theme = localStorage.getItem('theme')
       if (theme === 'light') {
         return true
       } else {
