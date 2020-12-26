@@ -28,7 +28,8 @@
     "@nuxtjs/google-analytics": "^2.4.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.14.9",
-    "prism-themes": "^1.5.0"
+    "prism-themes": "^1.5.0",
+    "vue-scrollactive": "^0.9.3"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

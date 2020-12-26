@@ -8,6 +8,7 @@ html[data-theme='light'] {
   --color-toggle-main: #323232;
   --color-toggle-sub: #fff;
   --color-toggle-stroke: #ddd;
+  --color-inactive: #d3d3d3;
 }
 html[data-theme='dark'] {
   --color-text-main: #c9d1d9;
@@ -20,6 +21,16 @@ html[data-theme='dark'] {
   --color-toggle-main: #6e40c9;
   --color-toggle-sub: #271052;
   --color-toggle-stroke: #3c1e70;
+  --color-inactive: #d3d3d3;
+}
+.nuxt-content[data-category='dev'] {
+  --color-category: #0786f8;
+}
+.nuxt-content[data-category='design'] {
+  --color-category: #ffc825;
+}
+.nuxt-content[data-category='other'] {
+  --color-category: #f7615e;
 }
 html {
   font-family: -apple-system, BlinkMacSystemFont, '游ゴシック体', YuGothic,
@@ -56,6 +67,12 @@ a,
 a:active {
   text-decoration: none;
   color: var(--color-text-main);
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
 }
 
 .container {

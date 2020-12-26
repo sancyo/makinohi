@@ -1,26 +1,33 @@
 <template>
   <div class="content">
-    <div class="content-info">
-      <time class="content-date">{{ article[0].date }}</time>
-      <h1 class="content-title">{{ article[0].title }}</h1>
-      <post-category :category="article[0].category" />
-    </div>
-    <div class="content-text">
-      <nuxt-content :document="article[0]" />
+    <main class="main-content">
+      <div class="content-info">
+        <time class="content-date">{{ article[0].date }}</time>
+        <h1 class="content-title">{{ article[0].title }}</h1>
+        <post-category :category="article[0].category" />
+      </div>
+      <div class="content-text">
+        <nuxt-content :document="article[0]" />
+      </div>
+    </main>
+    <div class="sub-contetnt">
+      <article-side-bar :article-toc="article[0].toc" />
     </div>
   </div>
 </template>
 
 <script>
 import postCategory from '@/components/atoms/postCategory'
+import articleSideBar from '../../../components/organisms/articleSideBar.vue'
 export default {
   layout: 'content',
   components: {
     postCategory,
+    articleSideBar,
   },
   async asyncData({ $content, params }) {
     let article = await $content('blog', { deep: true })
-      .only(['title', 'category', 'date', 'dir', 'body'])
+      .only(['title', 'category', 'date', 'dir', 'body', 'toc'])
       .fetch()
     article = article.filter((item) => item.dir.match(params.article))
     return {
@@ -67,9 +74,15 @@ export default {
   --color-category: #f7615e;
 }
 .content {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.main-content {
+  padding: 5rem 7rem;
   background: var(--color-bg-sub);
   width: 55%;
-  padding: 5rem 7rem;
   border-radius: 10px;
 }
 .content-date {
@@ -92,6 +105,11 @@ export default {
 .content-text {
   margin-top: 2.4rem;
 }
+.sub-content {
+  width: 30rem;
+}
+
+/* ==================== markdown styles ==================== */
 .nuxt-content h2 {
   font-size: 2.2rem;
   padding: 1.4rem 0 1.4rem 1.6rem;
