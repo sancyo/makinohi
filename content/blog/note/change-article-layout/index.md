@@ -14,10 +14,10 @@ tag: [note, page-history]
 
 ## ギャラリー
 ### 変更前
-![before](/blog/note/change-article-layout/before-article-layout.png)
+![before](/blog/note/change-article-layout/before-article-layout.PNG)
 
 ### 変更後
-![after](/blog/note/change-article-layout/after-article-layout.png)
+![after](/blog/note/change-article-layout/after-article-layout.PNG)
 
 ## ついでに...
 カテゴリーごとに指定してある色を、heading2の装飾に適用するようにした。<br/>
