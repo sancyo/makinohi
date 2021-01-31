@@ -31,4 +31,9 @@ ul {
 .category-menu-list {
   margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+  ul {
+    justify-content: center;
+  }
+}
 </style>

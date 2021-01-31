@@ -82,7 +82,7 @@ export default {
 .main-content {
   padding: 5rem 7rem;
   background: var(--color-bg-sub);
-  width: 55%;
+  width: 70%;
   border-radius: 10px;
 }
 .content-date {
@@ -107,6 +107,14 @@ export default {
 }
 .sub-content {
   width: 30rem;
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    width: 100%;
+    padding: 2.4rem 2.4rem;
+    border-radius: 0;
+  }
 }
 
 /* ==================== markdown styles ==================== */

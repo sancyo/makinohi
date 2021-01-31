@@ -80,3 +80,7 @@ a:active {
   display: flex;
   max-width: 1100px;
 }
+
+* {
+  box-sizing: border-box;
+}

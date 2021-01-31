@@ -23,6 +23,12 @@ export default {}
   height: 25rem;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .ad-card {
+    margin: 3.2rem auto;
+    width: 100%;
+  }
+}
 .ad {
   width: 50%;
   filter: var(--filter-svg);

@@ -36,4 +36,15 @@ export default {
   width: 100%;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .container {
+    display: block;
+    padding: 0 2.8rem;
+    margin: 0 auto;
+  }
+  .category-menu-container {
+    margin: 3.6rem auto 3.2rem 0;
+    padding: 0 2.8rem;
+  }
+}
 </style>

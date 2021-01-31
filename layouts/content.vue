@@ -34,4 +34,11 @@ export default {
   left: calc(((100vw - 1100px) / 2));
   transform: translateX(calc(-100% - 3rem));
 }
+@media screen and (max-width: 768px) {
+  .container {
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
 </style>

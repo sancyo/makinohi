@@ -56,7 +56,7 @@ export default {
   border-radius: 10px;
 }
 .category-menu-img {
-  width: 3.6rem;
+  width: 5rem;
   display: inline-block;
   filter: var(--filter-svg);
 
@@ -70,5 +70,10 @@ export default {
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 0.5px;
+}
+@media screen and (max-width: 768px) {
+  .category-menu-img {
+    width: 5rem;
+  }
 }
 </style>

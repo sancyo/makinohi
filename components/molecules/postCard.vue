@@ -2,9 +2,11 @@
   <div class="post-card">
     <article>
       <div class="post-info">
-        <post-category :category="category" />
-        <time class="post-date">{{ date }}</time>
-        <nuxt-link :to="`/${category}/${path}`">
+        <div class="wrapper">
+          <post-category :category="category" />
+          <time class="post-date">{{ date }}</time>
+        </div>
+        <nuxt-link class="post-link" :to="`/${category}/${path}`">
           <h3 class="post-title">{{ title }}</h3>
         </nuxt-link>
       </div>
@@ -64,5 +66,23 @@ export default {
   font-size: 1.4rem;
   color: var(--color-text-sub);
   margin: 0 1.6rem;
+}
+.post-link {
+  display: block;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .post-card {
+    padding: 2rem 1.6rem;
+  }
+  .post-info {
+    display: block;
+  }
+  .wrapper {
+    margin-bottom: 0.8rem;
+  }
 }
 </style>

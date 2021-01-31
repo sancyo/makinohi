@@ -120,4 +120,9 @@ export default {
 .active::before {
   background: var(--color-category);
 }
+@media screen and (max-width: 768px) {
+  .article-side-bar {
+    display: none;
+  }
+}
 </style>

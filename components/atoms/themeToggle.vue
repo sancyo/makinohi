@@ -85,8 +85,8 @@ export default {
   background: var(--color-toggle-sub);
   border: 4px solid var(--color-toggle-stroke);
   border-radius: 20px;
-  width: 3.2rem;
-  height: 1.8rem;
+  width: 3.6rem;
+  height: 1.9rem;
   position: relative;
 }
 .theme-toggle {
