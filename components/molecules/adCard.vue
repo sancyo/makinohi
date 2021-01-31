@@ -1,6 +1,11 @@
 <template>
   <div class="ad-card">
-    <a href="https://github.com/sancyo" class="ad-link">
+    <a
+      href="https://github.com/sancyo"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="ad-link"
+    >
       <img src="@/static/git-hub-logo.svg" alt="GitHub" class="ad" />
     </a>
   </div>
@@ -17,6 +22,12 @@ export default {}
   border-radius: 10px;
   height: 25rem;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .ad-card {
+    margin: 3.2rem auto;
+    width: 100%;
+  }
 }
 .ad {
   width: 50%;

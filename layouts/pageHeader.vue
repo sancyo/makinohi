@@ -46,4 +46,9 @@ export default {
   width: 160px;
   filter: var(--filter-svg);
 }
+@media screen and (max-width: 768px) {
+  .header-inner {
+    padding: 0 2.8rem;
+  }
+}
 </style>
