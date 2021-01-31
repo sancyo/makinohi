@@ -28,7 +28,7 @@ export default {
 
 <style scoped>
 .post-card-list {
-  background: #fff;
+  background: var(--color-bg-sub);
   padding: 5rem 7rem;
   border-radius: 10px;
   width: 55%;

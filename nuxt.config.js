@@ -1,14 +1,15 @@
+require('dotenv').config()
+const { GA_ID } = process.env
 export default {
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  ssr: true,
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: 'server',
+  target: 'static',
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -34,7 +35,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: ['@/plugins/vue-scrollactive.js'],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -48,11 +49,15 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/google-analytics',
   ],
+  googleAnalytics: {
+    id: 'UA-185292009-2',
+  },
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', '@nuxtjs/google-analytics'],
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
@@ -68,5 +73,8 @@ export default {
   server: {
     port: 3000, // デフォルト: 3000
     host: '0.0.0.0', // デフォルト: localhost
+  },
+  env: {
+    GA_ID,
   },
 }

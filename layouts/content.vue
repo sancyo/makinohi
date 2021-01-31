@@ -6,19 +6,16 @@
         <page-back-button />
       </div>
       <Nuxt />
-      <ad-card />
     </div>
   </div>
 </template>
 
 <script>
 import pageHeader from '@/layouts/pageHeader'
-import adCard from '@/components/molecules/adCard'
 import pageBackButton from '@/components/atoms/pageBackButton'
 export default {
   components: {
     pageHeader,
-    adCard,
     pageBackButton,
   },
 }

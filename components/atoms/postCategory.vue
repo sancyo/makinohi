@@ -26,11 +26,12 @@ export default {
   },
   methods: {
     setTagcolor() {
-      console.log(this.$route.params)
       if (this.category === 'dev') {
         return '#0786F8'
       } else if (this.category === 'design') {
         return '#FFC825'
+      } else if (this.category === 'other') {
+        return '#F7615E'
       } else {
         return '#323232'
       }
@@ -50,7 +51,6 @@ export default {
 .post-category {
   display: inline-block;
   font-size: 1.4rem;
-  background: #323232;
   color: #fff;
   border-radius: 3px;
   width: 0.9rem;

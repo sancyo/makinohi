@@ -1,14 +1,14 @@
 <template>
   <div class="post-card">
-    <nuxt-link :to="`/${category}/${path}`">
-      <article>
-        <div class="post-info">
-          <post-category :category="category" />
-          <time class="post-date">{{ date }}</time>
+    <article>
+      <div class="post-info">
+        <post-category :category="category" />
+        <time class="post-date">{{ date }}</time>
+        <nuxt-link :to="`/${category}/${path}`">
           <h3 class="post-title">{{ title }}</h3>
-        </div>
-      </article>
-    </nuxt-link>
+        </nuxt-link>
+      </div>
+    </article>
   </div>
 </template>
 
@@ -41,7 +41,7 @@ export default {
 
 <style scoped>
 .post-card {
-  background: #fff;
+  background: var(--color-bg-sub);
   display: block;
   padding: 1rem 0.6rem;
 }
@@ -54,17 +54,15 @@ export default {
   font-size: 1.7rem;
   margin: 0.4rem 0;
   transition: 0.3s;
+  font-weight: 600;
 }
 
-.post-info:hover .post-title {
+.post-title:hover {
   color: #3cb3e4;
 }
 .post-date {
   font-size: 1.4rem;
-  color: #878787;
+  color: var(--color-text-sub);
   margin: 0 1.6rem;
-}
-.post-info:hover .post-date {
-  color: #3cb3e4;
 }
 </style>

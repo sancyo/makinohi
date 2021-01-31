@@ -1,31 +1,60 @@
 <template>
   <div class="content">
-    <div class="content-info">
-      <time class="content-date">{{ article[0].date }}</time>
-      <h1 class="content-title">{{ article[0].title }}</h1>
-      <post-category :category="article[0].category" />
-    </div>
-    <div class="content-text">
-      <nuxt-content :document="article[0]" />
+    <main class="main-content">
+      <div class="content-info">
+        <time class="content-date">{{ article[0].date }}</time>
+        <h1 class="content-title">{{ article[0].title }}</h1>
+        <post-category :category="article[0].category" />
+      </div>
+      <div class="content-text">
+        <nuxt-content :document="article[0]" />
+      </div>
+    </main>
+    <div class="sub-contetnt">
+      <article-side-bar :article-toc="article[0].toc" />
     </div>
   </div>
 </template>
 
 <script>
 import postCategory from '@/components/atoms/postCategory'
+import articleSideBar from '../../../components/organisms/articleSideBar.vue'
 export default {
   layout: 'content',
   components: {
     postCategory,
+    articleSideBar,
   },
   async asyncData({ $content, params }) {
     let article = await $content('blog', { deep: true })
-      .only(['title', 'category', 'date', 'dir', 'body'])
+      .only(['title', 'category', 'date', 'dir', 'body', 'toc'])
       .fetch()
     article = article.filter((item) => item.dir.match(params.article))
     return {
       article,
     }
+  },
+  data() {
+    return {
+      headingColor: this.setHeadingcolor(),
+    }
+  },
+  mounted() {
+    const el = document.getElementsByClassName('nuxt-content')[0]
+    el.dataset.category = this.$route.params.category
+  },
+  methods: {
+    setHeadingcolor() {
+      if (this.$route.params.category === 'dev') {
+        return '#0786F8'
+      } else if (this.$route.params.category === 'design') {
+        return '#FFC825'
+      } else if (this.$route.params.category === 'other') {
+        return '#F7615E'
+      } else {
+        return '#323232'
+      }
+    },
   },
   head() {
     return {
@@ -35,10 +64,25 @@ export default {
 }
 </script>
 <style>
+.nuxt-content[data-category='dev'] {
+  --color-category: #0786f8;
+}
+.nuxt-content[data-category='design'] {
+  --color-category: #ffc825;
+}
+.nuxt-content[data-category='other'] {
+  --color-category: #f7615e;
+}
 .content {
-  background: #fff;
-  width: 55%;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.main-content {
   padding: 5rem 7rem;
+  background: var(--color-bg-sub);
+  width: 55%;
   border-radius: 10px;
 }
 .content-date {
@@ -61,6 +105,11 @@ export default {
 .content-text {
   margin-top: 2.4rem;
 }
+.sub-content {
+  width: 30rem;
+}
+
+/* ==================== markdown styles ==================== */
 .nuxt-content h2 {
   font-size: 2.2rem;
   padding: 1.4rem 0 1.4rem 1.6rem;
@@ -74,7 +123,7 @@ export default {
   left: 0;
   width: 5px;
   height: 80%;
-  background: #323232;
+  background: var(--color-category);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   border-radius: 3px;
@@ -144,6 +193,11 @@ export default {
 .nuxt-content img {
   width: 100%;
   margin-bottom: 1.8rem;
+  background: #f1f4f7;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.08), 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  margin-top: 0.8rem;
 }
 
 .nuxt-content p {
@@ -154,15 +208,15 @@ export default {
 .nuxt-content blockquote {
   margin: 1.6rem 0;
   padding: 2rem 1.8rem;
-  background: rgb(241, 244, 247);
+  background: var(--color-bg-main);
   border-left: 4px solid rgb(32, 168, 234);
   border-radius: 1px 6px 6px 1px;
 }
 
 .nuxt-content p code {
-  background: #eee;
+  background: var(--color-code-block);
   padding: 0.2rem 0.6rem;
-  color: #000;
+  color: var(--color-text-main);
   border-radius: 2px;
 }
 .nuxt-content blockquote h3 {
